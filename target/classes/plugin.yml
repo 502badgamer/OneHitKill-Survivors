@@ -1,0 +1,10 @@
+name: OneHitKill
+main: main.java.onehitkill.Main
+version: 0.0.1
+author: Gamer
+commands:
+   ohk:
+      description: Main OneHitKill command
+      usage: /<command> args
+      aliases: onehitkill
+      

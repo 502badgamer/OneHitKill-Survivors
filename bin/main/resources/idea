@@ -1,0 +1,202 @@
+
+One-hit Kill: Survivors
+
+All players click a sign to join, upon joining shows class interface
+
+This will force scoreboard to appear instead of appearing as default when joining, etc
+Forced Scoreboard (Displays) only shows sign when joining the game, and then on death, removes scoreboard
+Survive..
+ Kills: 
+
+Class Window
+ Citizen: Wooden Pickaxe (Blunt Weapon.itemData.getMetaData=lore/name) + 2 Apples
+ Prepper: Wooden Sword (Machete) + Bow + Arrows (2)
+ Butcher: Wooden Shovel + 1 Steak
+ Fireman: Wooden Axe (Steel Axe) + 1 Health Pack
+ Officer: Stick (Taser) + Wooden Hoe (9mm Pistol) + Dye (Ammox4)
+ Doctor: Wooden Shovel Doctor Kit (player can heal them self or other with right click, it heals 1/2 heart every second, displays this as a msg to self/other "Tending to wounds.. [+1/2 Heart]" for every second, the player will continue to heal until they move/full health)
+ 
+
+
+Players all have 3 hearts
+ players can attack with a bare hand, doing 1/2 heart every hit
+
+
+Hunger is enabled()
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Attacking
+ when swinging a weapon will have 0 durability and removes weapon visibility and takes # seconds to have weapon appear/attack again
+  pickaxe does 1 DMG 
+   minor critical % is 20% does 2 hearts
+   major critical % is 10% does 3 hearts
+  axe/sword/shovel does 3 DMG
+  stick does 1/2 DMG 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Sword has 3 seconds
+ Pickaxe has 4 seconds
+ Axe has 5 seconds
+ Shovel has 3 seconds
+ Stick has 3 seconds
+
+
+Reloading
+Rifle/Handgun
+  when guns are held, the player must press "Q"/drop which will ignore the drop
+  makes the Clip (Dye) remove into an item, then the clip must be reloaded and inserted
+ Player must right click the bullet then left click the clip to insert a bullet
+ right click the clip and then left click the gun to insert
+the zoom will not work unless the gun has the mag/ammo in it
+Shotgun/Rifle/Revovler
+ players just right click bullet and then left click gun
+
+
+Gun_Name >> # (ammo) Shows "R" for empty clip/no ammo
+ex. Pistol >> R
+
+
+Player Inventory/Hotbar Switching
+all spaces of the player inventory is black Glass Panes, when switching from slot 4 to anything else
+it will force the selected slot back to previous slot if switched to 5+
+
+
+Chests
+respawn common items % chance to generate items, otherwise will not generate, etc
+ 10% Ammo/Arrows (randomly 1-3)
+ 20% Food (Porkchop/Apple) (1-2)
+ 10% (1) Health Pack (Health Potion) Right click and heals player, must stop in tracks for 4 secoods
+       uses EXP bar fills from none to full to signal amount of time *heal player by right clicking them, does same as stated
+ 10% Grenades: (1)
+       Smoke (Weakness potion splash) creates a 1x1 radius of smoke for 2 seconds, 4x4 for 3 secs, 8x8 for 5 seconds then disappears
+       Explosive (harming potion splash) where it lands will make a TNT explosion, anything affected, will have physics like sand
+ 5% Handgun
+ 3% Revovler
+ 2% Shotgun/Rifle
+ 1% SMG
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Guns and their accuracy
+DMG is based on distance for each type of gun
+ Left click (on/off)
+ Iron Sights will zoom the players screen in, giving them Slowness 4
+
+Handgun (Wooden Hoe) max clip 7
+ 1-4 blocks is 3 DMG (max)
+ 5-11 blocks is 2 DMG
+ 12+ is 1 DMG (if hit at all)
+
+Revolver(Stone Hoe) max clip 6
+ 1-5 blocks is 3 DMG (max)
+ 6-11 blocks is 2 DMG
+ 12+ is 1/2 DMG (if hit at all)
+
+Shotgun (Iron Hoe) max clip 2 spreadshot of 6 projectiles
+ 1-5 blocks is 2 DMG (max)
+ 6-11 blocks is 1 DMG
+ 12+ is 1/2 DMG (if hit at all)
+
+Rifle (Gold Hoe) max clip 1
+ 1-6 blocks is 3 DMG (max)
+ 7-11 blocks is 2 DMG
+ 12+ is 3 DMG (if hit at all)
+
+SMG (Diamond Hoe) max clip 15
+ 1-6 blocks is 2 DMG (max)
+ 7-11 blocks is 2 DMG
+ 12+ is 1 DMG (if hit at all)
+
+
+
+Death
+ On death, players will respawn at the default world spawn
+ All kill data, is reset to 0
+
+Join - Spawn
+ /set 1/2/3/4
+
+After choosing class, the player will automatically teleport to set spawn point(s) randomly
+
+
+Cosmetic Items - when choosing a class, it will display the categories next to them
+when choosing items, they must be unlocked first (Window GUI, etc)
+when choosing a sword/shield/axe from the CI Window
+upon choosing the class, the items from that class will be loaded directly (if other than default CI item is chosen)
+ 
+Armor - Leather Armor color can be changed to one of the dyes (by default (No Armor selected)
+Swords -default Wooden for all
+Axes
+Shovel
+Stick: Bone/Blaze Rod/Other
+
+CMDS
+/unlock Sword_1(2,3,4,5)
+
+
+Gold Nugget in slot 4, hover over will display "Gold: ####"
+when killing a player, recieves 5 Gold
+each item to be unlocked will require a right click (2 times)
+displays as Lore: Right Click to Purchase; Right Click Again to Confirm 
+
+
+Killstreaks
+earns additional Gold
+ 3/5: +2
+ 6/9: +5
+ 10+: +10
+
+
+Timed Streaks (has 7 seconds between kills)
+earns additional Gold
+ Double-kill: +5
+ Triple-kill: +10
+ Quad-kill: +15
+
+
+Messages
+These will be displayed on screen in the middle (normal size text)
+
+Local
+ Join: "Player_Name has joined One-Hit Kill!" 
+ Death: "Player_Name was killed by Player_Name."
+ Timed Streak: "Player_Name has gotten a NAMED_KILL"
+
+On Screen
+ Gold: "Earned +## Gold"
+
+
+
+Leaderboards
+ on the hotbar slot 7 will be a chest, left/right click
+   then can display the following as separate Menus/GUIs
+    Most Kills: (Bone)
+    Highest KillStreak: (Flesh)
+    Longest Time Survived: (Clock)
+    
+   when opening either of these, it will display the players head and their score, etc
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~
+      DO NOT ADD
+~~~~~~~~~~~~~~~~~~~~
+
+  knife does 1 DMG 
+   minor critical % is 20% does 2 hearts
+   major critical % is 10% does 3 hearts
+  gun does 3 DMG
+  bow does 3 DMG
+   minor crit: 10% 1 DMG
+   major crit: 20% 2 DMG
+
+
+
+
+
+
+
+
+
+
